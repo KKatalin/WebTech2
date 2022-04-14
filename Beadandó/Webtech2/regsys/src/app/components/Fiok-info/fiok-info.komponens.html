@@ -1,0 +1,21 @@
+<mat-card class="menucard">
+  <mat-card-content>
+    <h2 class="title">Menü</h2>
+  <button mat-raised-button routerLinkActive="active" routerLink="/KertTerm-Lista" class="menubtn">Termékeink</button>
+ <button mat-raised-button routerLinkActive="active" routerLink="/KertTerm-Letrehoz" class="menubtn">Új termék hozzáadása</button>
+ <button mat-raised-button  routerLinkActive="active" (click)=logout() class="logout">Kijelentkezés</button>
+</mat-card-content>
+</mat-card>
+
+
+
+    <mat-card class="card">
+      <h2 class="title">Fiók Információ</h2>
+      <mat-card-content>
+        <div>Név: {{this.nev}}</div>
+        <div>Felhasználónév: {{this.felhnev}}</div>
+        <div>E-mail: {{this.email}}</div>
+      </mat-card-content>
+    </mat-card>
+
+   

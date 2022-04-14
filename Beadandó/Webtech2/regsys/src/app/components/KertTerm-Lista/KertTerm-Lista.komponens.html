@@ -1,0 +1,24 @@
+<mat-card class="menucard">
+  <mat-card-content>
+      <h2 class="title">Menü</h2>
+ <button mat-raised-button routerLinkActive="active" routerLink="/KertTerm-Letrehoz" class="menubtn">Új Kert Termék hozzáadása</button>
+ <button mat-raised-button routerLinkActive="active" routerLink="/Fiok-info" class="menubtn">Fiók Információ</button>
+ <button mat-raised-button  routerLinkActive="active" (click)=logout() class="logout">Kijelentkezés</button>
+</mat-card-content>
+</mat-card>
+
+
+<mat-sidenav-container class="sidenav"> <div><h1>Termékeink</h1></div>
+<div class="list">
+  <mat-card class="cardlist" *ngFor="let termek of KertTermek; let i= index">
+    <mat-card-title class="title"><b>
+      {{termek.nev}}</b>
+    </mat-card-title>
+    <mat-card-content >
+      <div style="text-align: right; "><b> Csomag tartalma: {{termek.mennyiseg}} db</b></div>
+      <div style="text-align: right; "> <b>Ár: {{termek.ar}} Ft</b>  </div>
+    </mat-card-content>
+    <button mat-raised-button (click)=edit(i)>Szerkesztés</button>
+  </mat-card>
+</div>
+</mat-sidenav-container>

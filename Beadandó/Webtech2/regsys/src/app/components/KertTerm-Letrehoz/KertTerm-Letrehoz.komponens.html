@@ -1,0 +1,35 @@
+<mat-card class="menucard">
+  <mat-card-content>
+      <h2 class="title">Menü</h2>
+ <button mat-raised-button routerLinkActive="active" routerLink="/KertTerm-Lista" class="menubtn">Termékeink</button>
+ <button mat-raised-button routerLinkActive="active" routerLink="/Fiok-info" class="menubtn">Fiók Információ</button>
+ <button mat-raised-button  routerLinkActive="active" (click)=logout() class="logout">Kijelentkezés</button>
+</mat-card-content>
+</mat-card>
+
+
+<mat-card class="card">
+  <h2 class="title">Új Kert Termék hozzáadása</h2>
+  <mat-card-content>
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="form" >
+
+    <mat-form-field >
+      <input matInput type="text" placeholder="Nev" formControlName="nev">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field >
+      <input matInput  placeholder="Mennyiseg" type="text"  formControlName="mennyiseg">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field >
+      <input matInput  placeholder="Ar" type="text" formControlName="ar">
+    </mat-form-field>
+    <br>
+
+    <button  mat-raised-button type="submit"  class="submit" >Hozzáadás</button>
+
+  </form>
+</mat-card-content>
+</mat-card>
